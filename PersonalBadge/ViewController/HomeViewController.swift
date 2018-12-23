@@ -9,7 +9,9 @@
 import UIKit
 import ChameleonFramework
 
-class HomeViewController: UIViewController, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
+let kItemSpacing: CGFloat = 8.0
+
+class HomeViewController: UIViewController, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -21,7 +23,6 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate, UICo
 
         self.navigationController?.delegate = self
         collectionView.register(UINib(nibName: String(describing: EventCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: kEventCellIdentifier)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,7 +59,14 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate, UICo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kEventCellIdentifier, for: indexPath)
+        #if DEBUG
+        cell.backgroundColor = UIColor.red
+        #endif
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return kItemSpacing
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
