@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4497BE8DF989249C8575B3D7 /* Pods_PersonalBadge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66320869595D583DF12FA9C /* Pods_PersonalBadge.framework */; };
+		6B1F748221CF7A7000B549F2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1F748121CF7A7000B549F2 /* HomeViewController.swift */; };
 		6B2EFA7521CF64ED00F53DB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EFA7421CF64ED00F53DB6 /* AppDelegate.swift */; };
-		6B2EFA7721CF64ED00F53DB6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EFA7621CF64ED00F53DB6 /* HomeViewController.swift */; };
 		6B2EFA7A21CF64ED00F53DB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B2EFA7821CF64ED00F53DB6 /* Main.storyboard */; };
 		6B2EFA7C21CF64EF00F53DB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B2EFA7B21CF64EF00F53DB6 /* Assets.xcassets */; };
 		6B2EFA7F21CF64EF00F53DB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B2EFA7D21CF64EF00F53DB6 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		294FDCAA9638A4547A7B3ECC /* Pods-PersonalBadge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonalBadge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PersonalBadge/Pods-PersonalBadge.debug.xcconfig"; sourceTree = "<group>"; };
+		6B1F747F21CF771E00B549F2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		6B1F748021CF771F00B549F2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		6B1F748121CF7A7000B549F2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6B2EFA7121CF64ED00F53DB6 /* PersonalBadge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalBadge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B2EFA7421CF64ED00F53DB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6B2EFA7621CF64ED00F53DB6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6B2EFA7921CF64ED00F53DB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6B2EFA7B21CF64EF00F53DB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B2EFA7E21CF64EF00F53DB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B2EFA8021CF64EF00F53DB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C66320869595D583DF12FA9C /* Pods_PersonalBadge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PersonalBadge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C886F651677568F9C34447F7 /* Pods-PersonalBadge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonalBadge.release.xcconfig"; path = "Pods/Target Support Files/Pods-PersonalBadge/Pods-PersonalBadge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4497BE8DF989249C8575B3D7 /* Pods_PersonalBadge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		015BB618C69C077C24020BCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C66320869595D583DF12FA9C /* Pods_PersonalBadge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		40AACC2FBCC286468B86B802 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				294FDCAA9638A4547A7B3ECC /* Pods-PersonalBadge.debug.xcconfig */,
+				C886F651677568F9C34447F7 /* Pods-PersonalBadge.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6B2EFA6821CF64EC00F53DB6 = {
 			isa = PBXGroup;
 			children = (
 				6B2EFA7321CF64ED00F53DB6 /* PersonalBadge */,
 				6B2EFA7221CF64ED00F53DB6 /* Products */,
+				40AACC2FBCC286468B86B802 /* Pods */,
+				015BB618C69C077C24020BCF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,7 +91,7 @@
 		6B2EFA8621CF650200F53DB6 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				6B2EFA7621CF64ED00F53DB6 /* HomeViewController.swift */,
+				6B1F748121CF7A7000B549F2 /* HomeViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -95,9 +121,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B2EFA8321CF64EF00F53DB6 /* Build configuration list for PBXNativeTarget "PersonalBadge" */;
 			buildPhases = (
+				51C68EA6D9548AA7A4B62F59 /* [CP] Check Pods Manifest.lock */,
 				6B2EFA6D21CF64ED00F53DB6 /* Sources */,
 				6B2EFA6E21CF64ED00F53DB6 /* Frameworks */,
 				6B2EFA6F21CF64ED00F53DB6 /* Resources */,
+				BD0B3631DF5B271D7F443DF4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,13 +182,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		51C68EA6D9548AA7A4B62F59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PersonalBadge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD0B3631DF5B271D7F443DF4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PersonalBadge/Pods-PersonalBadge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PersonalBadge/Pods-PersonalBadge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6B2EFA6D21CF64ED00F53DB6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B2EFA7721CF64ED00F53DB6 /* HomeViewController.swift in Sources */,
 				6B2EFA7521CF64ED00F53DB6 /* AppDelegate.swift in Sources */,
+				6B1F748221CF7A7000B549F2 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +240,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6B2EFA7921CF64ED00F53DB6 /* Base */,
+				6B1F748021CF771F00B549F2 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -179,6 +249,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6B2EFA7E21CF64EF00F53DB6 /* Base */,
+				6B1F747F21CF771E00B549F2 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -190,6 +261,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -237,7 +309,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -251,6 +323,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -292,7 +365,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -304,11 +377,12 @@
 		};
 		6B2EFA8421CF64EF00F53DB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 294FDCAA9638A4547A7B3ECC /* Pods-PersonalBadge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XX5K3QH3UW;
-				INFOPLIST_FILE = PersonalBadge/Info.plist;
+				INFOPLIST_FILE = PersonalBadge/SupportFile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -322,11 +396,12 @@
 		};
 		6B2EFA8521CF64EF00F53DB6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C886F651677568F9C34447F7 /* Pods-PersonalBadge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XX5K3QH3UW;
-				INFOPLIST_FILE = PersonalBadge/Info.plist;
+				INFOPLIST_FILE = PersonalBadge/SupportFile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

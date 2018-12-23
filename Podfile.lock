@@ -1,0 +1,24 @@
+PODS:
+  - ChameleonFramework (2.1.0):
+    - ChameleonFramework/Default (= 2.1.0)
+  - ChameleonFramework/Default (2.1.0)
+  - Realm (3.12.0):
+    - Realm/Headers (= 3.12.0)
+  - Realm/Headers (3.12.0)
+
+DEPENDENCIES:
+  - ChameleonFramework
+  - Realm
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ChameleonFramework
+    - Realm
+
+SPEC CHECKSUMS:
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  Realm: cdaef23c4ddb36ab1ddffed23f5a7f3332fc5585
+
+PODFILE CHECKSUM: 1f39b4b2182c92fa40f00018b0a3f86b50cc8414
+
+COCOAPODS: 1.5.3

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  PersonalBadge
 //
 //  Created by 康梁 on 2018/12/23.
@@ -7,14 +7,14 @@
 //
 
 import UIKit
+import ChameleonFramework
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
 
 
 }
-
