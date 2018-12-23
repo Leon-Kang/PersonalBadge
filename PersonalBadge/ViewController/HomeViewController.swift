@@ -9,9 +9,10 @@
 import UIKit
 import ChameleonFramework
 
-class HomeViewController: UIViewController, UINavigationControllerDelegate {
+class HomeViewController: UIViewController, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var plusButton: UIButton!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     let transitionAnimation = EditPageTransitions()
     
@@ -19,6 +20,7 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate {
         super.viewDidLoad()
 
         self.navigationController?.delegate = self
+        collectionView.register(UINib(nibName: String(describing: EventCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: kEventCellIdentifier)
         
     }
     
@@ -39,6 +41,29 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate {
         navigationController?.pushViewController(editViewController, animated: true)
     }
 
+    // MARK： - Collection View
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = kScreenWidth / 2 - 32
+        let size = CGSize(width: width, height: width / 3 * 4)
+        return size
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kEventCellIdentifier, for: indexPath)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
     
     // MARK: navigation transition
     func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
