@@ -8,6 +8,8 @@ project 'PersonalBadge.xcodeproj'
 def common_pods
   # Themes
   pod 'ChameleonFramework'
+  # UI
+  pod 'pop'
   # Data
   pod 'Realm'
 end

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="productCellIdentifier" id="Q90-jv-eFs" customClass="ProductCollectionViewCell" customModule="ObjectManager" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="211" height="216"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="211" height="216"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Gx-np-mdH">
+                        <rect key="frame" x="0.0" y="-0.5" width="211" height="216"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fire.png" translatesAutoresizingMaskIntoConstraints="NO" id="KRR-tU-k9J">
+                                <rect key="frame" x="0.0" y="0.0" width="211" height="190"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbR-Xf-EfI">
+                                <rect key="frame" x="31" y="195" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fbR-Xf-EfI" firstAttribute="leading" secondItem="1Gx-np-mdH" secondAttribute="leading" constant="31" id="AwN-zv-PPJ"/>
+                            <constraint firstAttribute="bottom" secondItem="KRR-tU-k9J" secondAttribute="bottom" constant="26" id="H3f-1S-DeB"/>
+                            <constraint firstItem="KRR-tU-k9J" firstAttribute="top" secondItem="1Gx-np-mdH" secondAttribute="top" id="UfC-0D-Q0z"/>
+                            <constraint firstAttribute="trailing" secondItem="KRR-tU-k9J" secondAttribute="trailing" id="bQC-Iu-Gah"/>
+                            <constraint firstItem="KRR-tU-k9J" firstAttribute="leading" secondItem="1Gx-np-mdH" secondAttribute="leading" id="x3K-Ca-pT5"/>
+                            <constraint firstItem="fbR-Xf-EfI" firstAttribute="top" secondItem="KRR-tU-k9J" secondAttribute="bottom" constant="5" id="yOd-cG-jNL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="1Gx-np-mdH" firstAttribute="width" secondItem="Q90-jv-eFs" secondAttribute="width" id="Lz1-du-4jv"/>
+                <constraint firstItem="1Gx-np-mdH" firstAttribute="height" secondItem="Q90-jv-eFs" secondAttribute="height" id="Toy-Ar-pRJ"/>
+                <constraint firstItem="1Gx-np-mdH" firstAttribute="centerX" secondItem="Q90-jv-eFs" secondAttribute="centerX" id="VwU-L2-tdv"/>
+                <constraint firstItem="1Gx-np-mdH" firstAttribute="centerY" secondItem="Q90-jv-eFs" secondAttribute="centerY" id="m1N-rw-osT"/>
+            </constraints>
+            <size key="customSize" width="211" height="216"/>
+            <connections>
+                <outlet property="dateLabel" destination="fbR-Xf-EfI" id="pme-bI-TJb"/>
+                <outlet property="imageView" destination="KRR-tU-k9J" id="KRK-3m-fKr"/>
+            </connections>
+            <point key="canvasLocation" x="-49.5" y="137"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Fire.png" width="47" height="42"/>
+    </resources>
+</document>

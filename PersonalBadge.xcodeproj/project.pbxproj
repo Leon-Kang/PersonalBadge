@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4497BE8DF989249C8575B3D7 /* Pods_PersonalBadge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66320869595D583DF12FA9C /* Pods_PersonalBadge.framework */; };
 		6B1F748221CF7A7000B549F2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1F748121CF7A7000B549F2 /* HomeViewController.swift */; };
+		6B1F748421CF7F4000B549F2 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1F748321CF7F4000B549F2 /* EventDetailViewController.swift */; };
+		6B1F748B21CF7FBB00B549F2 /* EditPageTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1F748A21CF7FBB00B549F2 /* EditPageTransitions.swift */; };
+		6B1F748D21CF809A00B549F2 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1F748C21CF809A00B549F2 /* CreateEventViewController.swift */; };
 		6B2EFA7521CF64ED00F53DB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EFA7421CF64ED00F53DB6 /* AppDelegate.swift */; };
 		6B2EFA7A21CF64ED00F53DB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B2EFA7821CF64ED00F53DB6 /* Main.storyboard */; };
 		6B2EFA7C21CF64EF00F53DB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B2EFA7B21CF64EF00F53DB6 /* Assets.xcassets */; };
@@ -20,6 +23,9 @@
 		6B1F747F21CF771E00B549F2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		6B1F748021CF771F00B549F2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		6B1F748121CF7A7000B549F2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6B1F748321CF7F4000B549F2 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		6B1F748A21CF7FBB00B549F2 /* EditPageTransitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPageTransitions.swift; sourceTree = "<group>"; };
+		6B1F748C21CF809A00B549F2 /* CreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		6B2EFA7121CF64ED00F53DB6 /* PersonalBadge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalBadge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B2EFA7421CF64ED00F53DB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B2EFA7921CF64ED00F53DB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,6 +65,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6B1F748921CF7FBB00B549F2 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				6B1F748A21CF7FBB00B549F2 /* EditPageTransitions.swift */,
+			);
+			path = Transitions;
+			sourceTree = "<group>";
+		};
 		6B2EFA6821CF64EC00F53DB6 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +97,7 @@
 				6B2EFA7421CF64ED00F53DB6 /* AppDelegate.swift */,
 				6B2EFA8621CF650200F53DB6 /* ViewController */,
 				6B2EFA8721CF651E00F53DB6 /* StoryBoard */,
+				6B1F748921CF7FBB00B549F2 /* Transitions */,
 				6B2EFA8821CF653D00F53DB6 /* SupportFile */,
 			);
 			path = PersonalBadge;
@@ -92,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				6B1F748121CF7A7000B549F2 /* HomeViewController.swift */,
+				6B1F748321CF7F4000B549F2 /* EventDetailViewController.swift */,
+				6B1F748C21CF809A00B549F2 /* CreateEventViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -210,11 +227,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-PersonalBadge/Pods-PersonalBadge-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -228,8 +247,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B1F748421CF7F4000B549F2 /* EventDetailViewController.swift in Sources */,
 				6B2EFA7521CF64ED00F53DB6 /* AppDelegate.swift in Sources */,
+				6B1F748D21CF809A00B549F2 /* CreateEventViewController.swift in Sources */,
 				6B1F748221CF7A7000B549F2 /* HomeViewController.swift in Sources */,
+				6B1F748B21CF7FBB00B549F2 /* EditPageTransitions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
