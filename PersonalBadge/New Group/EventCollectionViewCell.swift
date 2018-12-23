@@ -16,10 +16,37 @@ class EventCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var unlockTimeLabel: UILabel!
     
+    public var cellSizeStyle : CellSizeStyle? {
+        get {
+            return self.cellSizeStyle
+        }
+        set (newCellSizeStyle) {
+            if newCellSizeStyle != cellSizeStyle {
+                refreshUI()
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        setupUI()
+    }
+    
+    // MARK: - UI
+    func setupUI() {
+        self.contentView.layer.masksToBounds = true
+        self.contentView.layer.cornerRadius = 8
+        self.contentView.clipsToBounds = true
+        
+        #if DEBUG
+        contentView.backgroundColor = UIColor.red
+        badgeImageView.backgroundColor = UIColor.blue
+        #endif
+    }
+    
+    func refreshUI() {
+        
     }
 
 }
