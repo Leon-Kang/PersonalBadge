@@ -17,10 +17,7 @@ class EventCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var unlockTimeLabel: UILabel!
     
     public var cellSizeStyle : CellSizeStyle? {
-        get {
-            return self.cellSizeStyle
-        }
-        set (newCellSizeStyle) {
+        didSet (newCellSizeStyle) {
             if newCellSizeStyle != cellSizeStyle {
                 refreshUI()
             }
