@@ -60,7 +60,7 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate, UICo
         navigationController?.pushViewController(editViewController, animated: true)
     }
 
-    // MARK： - Collection View
+    // MARK: Collection View
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 3
     }
