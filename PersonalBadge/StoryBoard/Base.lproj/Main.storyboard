@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7cW-Au-iix">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kJH-Er-jmU">
                                     <size key="itemSize" width="50" height="50"/>
@@ -51,9 +51,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3Li-mE-hBo"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" id="3Li-mE-hBo">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="I8r-bw-3lO">
+                            <connections>
+                                <action selector="changeLayout:" destination="BYZ-38-t0r" id="gnC-2G-ltH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="changeLayoutItem" destination="I8r-bw-3lO" id="Xyw-IG-iOV"/>
                         <outlet property="collectionView" destination="7cW-Au-iix" id="GGw-XF-VVY"/>
                         <outlet property="plusButton" destination="TlY-l4-VyJ" id="xoc-ll-HEU"/>
                     </connections>
