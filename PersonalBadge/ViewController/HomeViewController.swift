@@ -14,15 +14,15 @@ let kItemSpacing: CGFloat = 16.0
 public enum CellSizeStyle {
     public typealias RawValue = String
     
-    case Big
-    case Normal
-    case Small
+    case Big, Normal, Small
 }
 
-class HomeViewController: UIViewController, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class HomeViewController: UIViewController {
 
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var changeLayoutItem: UIBarButtonItem!
     
     var cellSizeStyle : CellSizeStyle = .Small
     
@@ -33,7 +33,9 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupUI()
         self.navigationController?.delegate = self
+        
         collectionView.register(UINib(nibName: String(describing: EventCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: kEventCellIdentifier)
         let bigWidth = kScreenWidth / 2 - 16 - 8 // - left/right spacing - item spacing
         let normalWith = (kScreenWidth - 32 - 16) / 3
@@ -50,8 +52,8 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate, UICo
     }
     
     // MARK: setup UI
-    func setupNavigation() {
-        navigationController?.isNavigationBarHidden = true
+    func setupUI() {
+        setupNavigation()
     }
 
     // MARK: User Active
@@ -59,7 +61,16 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate, UICo
         let editViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: kCreateViewControllerIdentifier)
         navigationController?.pushViewController(editViewController, animated: true)
     }
+    
+    @IBAction func changeLayout(_ sender: Any) {
+        self.cellSizeStyle = cellSizeStyle == .Big ? .Normal : .Big
+        self.collectionView.reloadData()
+    }
 
+}
+
+
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout  {
     // MARK: Collection View
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 3
@@ -84,11 +95,22 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 64, left: 16, bottom: 16, right: 16)
+        return UIEdgeInsets(top: 8, left: 16, bottom: 16, right: 16)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+    }
+}
+
+extension HomeViewController: UINavigationControllerDelegate {
+    func setupNavigation() {
+        navigationController?.hidesBarsOnSwipe = false
+        navigationController?.isNavigationBarHidden = false
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .always
+        navigationItem.title = "Badge"
+//        navigationItem.prompt = "Badge"
     }
     
     // MARK: navigation transition
@@ -101,16 +123,15 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate, UICo
             let animation = transitionAnimation
             animation.pushing = true
             animation.detailView = self.plusButton
-            return animation
+            return nil
         } else if fromVC.isKind(of: CreateEventViewController.self) {
-//            let animation = transitionAnimation
-//            transitionAnimation.pushing = false
-//            animation.detailView = self.plusButton
-//            return animation
+            //            let animation = transitionAnimation
+            //            transitionAnimation.pushing = false
+            //            animation.detailView = self.plusButton
+            //            return animation
             return nil
         }
         
         return nil
     }
-
 }
