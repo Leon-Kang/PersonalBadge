@@ -95,7 +95,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 16, bottom: 16, right: 16)
+        return UIEdgeInsets(top: 8, left: 16, bottom: 16, right: 16)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -105,11 +105,12 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
 extension HomeViewController: UINavigationControllerDelegate {
     func setupNavigation() {
+        navigationController?.hidesBarsOnSwipe = false
         navigationController?.isNavigationBarHidden = false
-        navigationItem.largeTitleDisplayMode = .automatic
-        navigationItem.title = "HomePage"
-        navigationItem.prompt = "Badge"
-        navigationItem.hidesSearchBarWhenScrolling = true
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .always
+        navigationItem.title = "Badge"
+//        navigationItem.prompt = "Badge"
     }
     
     // MARK: navigation transition
