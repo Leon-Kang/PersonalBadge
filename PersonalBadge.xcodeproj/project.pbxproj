@@ -39,7 +39,7 @@
 		6B2EFA7921CF64ED00F53DB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6B2EFA7B21CF64EF00F53DB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B2EFA7E21CF64EF00F53DB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6B2EFA8021CF64EF00F53DB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B8830672278955800F2FB35 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C66320869595D583DF12FA9C /* Pods_PersonalBadge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PersonalBadge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C886F651677568F9C34447F7 /* Pods-PersonalBadge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonalBadge.release.xcconfig"; path = "Pods/Target Support Files/Pods-PersonalBadge/Pods-PersonalBadge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,10 +124,10 @@
 				6B2EFA7421CF64ED00F53DB6 /* AppDelegate.swift */,
 				6B2EFA8621CF650200F53DB6 /* ViewController */,
 				6B1F749221CF9C0800B549F2 /* View */,
-				6B2EFA8721CF651E00F53DB6 /* StoryBoard */,
 				6B1F748921CF7FBB00B549F2 /* Transitions */,
 				6B1F749321CF9E3C00B549F2 /* Helper */,
 				6B2EFA8821CF653D00F53DB6 /* SupportFile */,
+				6B8830672278955800F2FB35 /* Info.plist */,
 			);
 			path = PersonalBadge;
 			sourceTree = "<group>";
@@ -154,8 +154,8 @@
 		6B2EFA8821CF653D00F53DB6 /* SupportFile */ = {
 			isa = PBXGroup;
 			children = (
+				6B2EFA8721CF651E00F53DB6 /* StoryBoard */,
 				6B2EFA7B21CF64EF00F53DB6 /* Assets.xcassets */,
-				6B2EFA8021CF64EF00F53DB6 /* Info.plist */,
 			);
 			path = SupportFile;
 			sourceTree = "<group>";
@@ -204,6 +204,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 6B2EFA6821CF64EC00F53DB6;
 			productRefGroup = 6B2EFA7221CF64ED00F53DB6 /* Products */;
@@ -254,7 +255,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PersonalBadge/Pods-PersonalBadge-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-PersonalBadge/Pods-PersonalBadge-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
@@ -267,7 +268,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PersonalBadge/Pods-PersonalBadge-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PersonalBadge/Pods-PersonalBadge-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -437,14 +438,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XX5K3QH3UW;
-				INFOPLIST_FILE = PersonalBadge/SupportFile/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PersonalBadge/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = per.kl.PersonalBadge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -456,14 +457,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XX5K3QH3UW;
-				INFOPLIST_FILE = PersonalBadge/SupportFile/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PersonalBadge/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = per.kl.PersonalBadge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

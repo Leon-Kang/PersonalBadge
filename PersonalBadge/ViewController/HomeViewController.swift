@@ -105,6 +105,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
 extension HomeViewController: UINavigationControllerDelegate {
     func setupNavigation() {
+        guard (self.navigationController?.navigationBar) != nil else {
+            return
+        }
         navigationController?.hidesBarsOnSwipe = false
         navigationController?.isNavigationBarHidden = false
         navigationController?.navigationBar.prefersLargeTitles = true
